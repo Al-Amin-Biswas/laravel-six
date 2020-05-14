@@ -31,6 +31,16 @@ Route::get('edit/post/{id}','postcontroller@editpost');
 Route::post('update/post/{id}','postcontroller@updatepost');
 
 
+//-------student crud use model------------note.
+Route::get('/students','student@mainstudent')->name('student');
+
+
+
+
+
+
+
+
 
 
 //Previous code for learning time ...........
