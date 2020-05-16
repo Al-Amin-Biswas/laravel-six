@@ -25,7 +25,7 @@
                     <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me. -->
                     <a href="{{route('display')}}" class="btn btn-info">All Students</a>
 
-                    <form action="{{route('storestd')}}" method="post" enctype="multipart/form-data">
+                    <form action="{{url('update/student/'.$love->id)}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @if(session()->has('success'))
                             <div class="alert alert-success">
@@ -40,28 +40,28 @@
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Post Title </label>
-                                <input type="text" class="form-control" placeholder="Name" name="name">
+                                <input type="text" class="form-control" value="{{$love->name}}" name="name">
 
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Post Title </label>
-                                <input type="text" class="form-control" placeholder="Address" name="address">
+                                <input type="text" class="form-control" value="{{$love->address}}" name="address">
 
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Post Title </label>
-                                <input type="email" class="form-control" placeholder="example@email.com" name="email">
+                                <input type="email" class="form-control" value="{{$love->email}}" name="email">
 
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Post Title </label>
-                                <input type="text" class="form-control" placeholder="Phone" name="phone">
+                                <input type="text" class="form-control" value="{{$love->phone}}" name="phone">
 
                             </div>
                         </div>

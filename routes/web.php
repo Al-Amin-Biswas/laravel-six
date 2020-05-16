@@ -33,10 +33,12 @@ Route::post('update/post/{id}','postcontroller@updatepost');
 
 //-------student crud use model------------note.
 Route::get('/students','student@mainstudent')->name('student');
-
-
-
-
+Route::post('/students/store','student@store')->name('storestd');
+Route::get('/all/students','student@displayy')->name('display');
+Route::get('view/student/{id}','student@stdview');
+Route::get('edit/student/{id}','student@stdedit');
+Route::get('/delete/student/{id}','student@stddelete');
+Route::post('/update/student/{id}','student@updatestd');
 
 
 
